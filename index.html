@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valida Form</title>
+</head>
+<body>
+    
+    <div>
+        <form id="form1" name="form1" method="post" action="/index" onsubmit="return validaForm(this)">
+            <label for="email"></label>
+            <input placeholder="Digite seu e-mail" type="email" id="email" size="35" />
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function validaForm (){
+            if(document.getElementById("email").value == ""){
+                alert('Preencha o campo e-mail');
+            }else{
+                alert('Success!');
+            }
+        }
+    </script>
+
+        
+</body>
+</html>
